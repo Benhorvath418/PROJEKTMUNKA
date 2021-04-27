@@ -1,0 +1,21 @@
+div{
+    width: 50%;
+    background-color: beige;
+    border: 1px solid brown;
+    padding: 10px auto;
+}
+
+table{
+    width: 70%;
+    margin: 10px auto;
+    background-color: cadetblue;
+    border: 1px aquamarine;
+}
+
+td{
+    background-color: azure;
+}
+
+body{
+    background-color: lightgray;
+}
