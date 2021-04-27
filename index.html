@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projektmunka</title>
+</head>
+<body>
+    <div>
+        <label for="nev">Név:</label>
+        <input type = "text" id = "nev">
+        <button onclick="felvesz()">Felvesz</button>
+    </div>
+    <script>
+        var tomb = [
+        ["Géza", 52],
+        ["Anna", 3],
+        ["Kati", 1]
+        ]
+        /*console.log(tomb[0][1])
+        console.log(tomb[1])*/
+        function kiir(){
+            var s = "<ul>";
+            tomb.sort(fg);
+            for (var i = 0; i < tomb.length; i++){
+                s+="<li onclick='torol("+i+")'>"+tomb[i][0]+" "+tomb[i][1]+"</li>"
+            }
+            s+="</ul>"
+            document.getElementById("ki").innerHTML=s;
+        }
+        function felvesz(){
+            var nev = document.getElementById("nev").value;
+            var kat = document.getElementById("kat").value;
+        }
+
+        if (nev.length > 0 && kat.length > 0){
+            var kat = parseInt(kat);
+            var uj = [nev, kat];
+            tomb.push(uj)
+        }
+        
+    </script>
+    <label for="r1">Krónikus betegsége van</label>
+    <input type="radio" name="radio" id="r1" checked>
+    <label for="r2">Egészégügyben, vagy idősotthonban dolgozik</label>
+    <input type="radio" name="radio" id="r2">
+    <label for="r1">Idősotthonban lakik</label>
+    <input type="radio" name="radio1" id="r3" checked>
+    <label for="r2">Korábban már elkapta a vírust</label>
+    <input type="radio" name="radio1" id="r4">
+</body>
+</html>
